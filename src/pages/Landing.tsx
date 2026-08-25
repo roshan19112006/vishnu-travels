@@ -332,9 +332,9 @@ export default function Landing() {
             <motion.div {...fadeUp}>
               <div className="relative">
                 {/* Photo placeholder — replace the inner div with an <img> once you add your photo */}
-                <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-primary/[0.06] to-accent/[0.04] border border-border/30 flex items-center justify-center overflow-hidden">                      {/* Owner photo — drop your photo as public/vishnu.jpg then uncomment the img tag and remove the placeholder */}
+                <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-primary/[0.06] to-accent/[0.04] border border-border/30 flex items-center justify-center overflow-hidden">                      {/* Owner photo */}
                   <img
-                    src="/vishnu.jpg"
+                    src="/assets/owner.jpeg"
                     alt="Vishnu — Founder & Owner"
                     className="w-full h-full object-cover"
                     onError={(e) => {
@@ -344,7 +344,7 @@ export default function Landing() {
                   />
                   <div className="hidden flex-col items-center gap-3 p-8">
                     <Camera className="w-12 h-12 text-primary/30" />
-                    <p className="text-sm text-muted-foreground/60">Add vishnu.jpg to public/</p>
+                    <p className="text-sm text-muted-foreground/60">Add owner image</p>
                   </div>
                 </div>
                 {/* Floating badge */}
