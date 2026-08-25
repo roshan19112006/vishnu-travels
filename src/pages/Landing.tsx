@@ -208,15 +208,11 @@ export default function Landing() {
                 <Award className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-primary">Trusted Since 2019</span>
               </div>
-              <div className="flex items-center gap-4 mb-6">
-                <img src="/assets/logo.jpeg" alt="Vishnu Travels" className="w-14 h-14 rounded-2xl object-cover shadow-md" />
-                <div>
-                  <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold tracking-tight leading-[1.08]">
-                    Premium Travel{" "}
-                    <span className="text-primary">Built on Trust</span>
-                  </h1>
-                </div>
-              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold tracking-tight leading-[1.08] mb-6">
+                Premium Travel{" "}
+                <br className="hidden sm:block" />
+                <span className="text-primary">Built on Trust</span>
+              </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-lg">
                 From compact sedans to 56-seater coaches — dependable, well-maintained
                 vehicles driven by experienced professionals. Serving families,
