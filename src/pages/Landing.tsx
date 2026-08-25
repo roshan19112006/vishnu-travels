@@ -259,19 +259,7 @@ export default function Landing() {
             >
               <div className="relative">
                 <div className="w-full aspect-square rounded-3xl bg-gradient-to-br from-primary/[0.06] to-accent/[0.04] border border-border/30 flex items-center justify-center overflow-hidden">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto rounded-full bg-primary/[0.08] flex items-center justify-center mb-6">
-                      <Car className="w-16 h-16 text-primary" />
-                    </div>
-                    <div className="flex justify-center gap-4">
-                      <div className="w-16 h-16 rounded-2xl bg-accent/[0.08] flex items-center justify-center">
-                        <Truck className="w-8 h-8 text-amber-700" />
-                      </div>
-                      <div className="w-16 h-16 rounded-2xl bg-primary/[0.08] flex items-center justify-center">
-                        <Bus className="w-8 h-8 text-primary" />
-                      </div>
-                    </div>
-                  </div>
+                  <img src="/assets/logo.jpeg" alt="Vishnu Travels" className="w-3/5 h-3/5 object-contain" />
                 </div>
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
