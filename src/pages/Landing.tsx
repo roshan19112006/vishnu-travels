@@ -485,6 +485,15 @@ export default function Landing() {
                         </li>
                       ))}
                     </ul>
+                    <a
+                      href={`https://wa.me/9025336238?text=${encodeURIComponent(`Hi Vishnu Travels, I would like to enquire about the ${vehicle.title} (${vehicle.capacity}).`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 w-full flex items-center justify-center gap-2 rounded-xl bg-primary/[0.06] text-primary text-sm font-semibold py-2.5 hover:bg-primary hover:text-white transition-all duration-300"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      Enquire on WhatsApp
+                    </a>
                   </CardContent>
                 </Card>
               </motion.div>
