@@ -18,7 +18,6 @@ import {
   Award,
   Globe,
   ArrowRight,
-  Quote,
   Camera,
   ChevronRight,
 } from "lucide-react";
@@ -103,31 +102,28 @@ const fleet = [
   },
 ];
 
-const reviews = [
-  {
-    name: "Karthik R.",
-    location: "Chennai",
-    rating: 5,
-    text: "Booked an Innova for a family pilgrimage to Madurai. The vehicle was spotless, the driver was courteous and punctual, and the entire journey was seamless. Will definitely book again.",
-  },
-  {
-    name: "Priya S.",
-    location: "Coimbatore",
-    rating: 5,
-    text: "We hired a 12-seater tempo traveller for our office trip to Ooty. Spacious, well-maintained, and the driver knew every route perfectly. Excellent value for money.",
-  },
-  {
-    name: "Mohammed A.",
-    location: "Salem",
-    rating: 5,
-    text: "Used Vishnu Travels for my sister's wedding — booked two vehicles for the full day. Everything ran on time, vehicles were decorated as requested, and the pricing was transparent with no hidden costs.",
-  },
-  {
-    name: "Lakshmi D.",
-    location: "Tiruchirappalli",
-    rating: 5,
-    text: "Hired a 56-seater bus for a temple tour with our community group of 50 people. The bus was comfortable, AC worked perfectly, and the driver was very cooperative throughout the three-day trip.",
-  },
+const customerImages = [
+  { src: "/assets/c1.jpeg", alt: "Customer trip 1" },
+  { src: "/assets/c2.jpeg", alt: "Customer trip 2" },
+  { src: "/assets/c3.jpeg", alt: "Customer trip 3" },
+  { src: "/assets/c5.jpeg", alt: "Customer trip 4" },
+  { src: "/assets/c6.jpeg", alt: "Customer trip 5" },
+  { src: "/assets/c7.jpeg", alt: "Customer trip 6" },
+  { src: "/assets/c8.jpeg", alt: "Customer trip 7" },
+  { src: "/assets/c9.jpeg", alt: "Customer trip 8" },
+  { src: "/assets/c10.jpeg", alt: "Customer trip 9" },
+  { src: "/assets/c11.jpeg", alt: "Customer trip 10" },
+  { src: "/assets/c12.jpeg", alt: "Customer trip 11" },
+  { src: "/assets/c13.jpeg", alt: "Customer trip 12" },
+  { src: "/assets/c14.jpeg", alt: "Customer trip 13" },
+  { src: "/assets/c15.jpeg", alt: "Customer trip 14" },
+  { src: "/assets/c16.jpeg", alt: "Customer trip 15" },
+  { src: "/assets/c17.jpeg", alt: "Customer trip 16" },
+  { src: "/assets/c18.jpeg", alt: "Customer trip 17" },
+  { src: "/assets/c19.jpeg", alt: "Customer trip 18" },
+  { src: "/assets/c20.jpeg", alt: "Customer trip 19" },
+  { src: "/assets/c21.jpeg", alt: "Customer trip 20" },
+  { src: "/assets/c22.jpeg", alt: "Customer trip 21" },
 ];
 
 const stats = [
@@ -497,55 +493,42 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Customer Reviews Section */}
+      {/* Customer Images Section */}
       <section id="reviews" className="py-20 lg:py-28 bg-white/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
-              Testimonials
+              Happy Customers
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              What Our Customers Say
+              Our Customers in Action
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Don't just take our word for it — here's what passengers who have
-              travelled with us have to say about their experience.
+              Real moments from real journeys — here's a glimpse of the
+              experiences our passengers have enjoyed with Vishnu Travels.
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 gap-6">
-            {reviews.map((review, i) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            {customerImages.map((img, i) => (
               <motion.div
-                key={review.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                key={img.src}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                transition={{ duration: 0.4, delay: i * 0.03 }}
+                className="aspect-square rounded-2xl overflow-hidden border border-border/30 hover:shadow-lg hover:shadow-primary/[0.05] transition-all duration-300"
               >
-                <Card className="h-full border-border/40 hover:shadow-lg hover:shadow-primary/[0.03] transition-all duration-300 bg-white">
-                  <CardContent className="p-6">
-                    <Quote className="w-8 h-8 text-primary/10 mb-3" />
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                      "{review.text}"
-                    </p>
-                    <div className="flex items-center justify-between pt-4 border-t border-border/40">
-                      <div>
-                        <p className="text-sm font-semibold">{review.name}</p>
-                        <p className="text-xs text-muted-foreground">{review.location}</p>
-                      </div>
-                      <div className="flex gap-0.5">
-                        {Array.from({ length: review.rating }).map((_, s) => (
-                          <Star key={s} className="w-3.5 h-3.5 fill-accent text-accent" />
-                        ))}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
               </motion.div>
             ))}
           </div>
 
-          {/* Add Review CTA */}
           <motion.div {...fadeUp} className="mt-10 text-center">
             <p className="text-sm text-muted-foreground mb-3">
               Had a great experience with us? Share it!
