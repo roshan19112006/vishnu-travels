@@ -259,7 +259,7 @@ export default function Landing() {
             >
               <div className="relative">
                 <div className="w-full aspect-square rounded-3xl bg-gradient-to-br from-primary/[0.06] to-accent/[0.04] border border-border/30 flex items-center justify-center overflow-hidden">
-                  <img src="/assets/logo.jpeg" alt="Vishnu Travels" className="w-3/5 h-3/5 object-contain" />
+                  <img src="/assets/logo.jpeg" alt="Vishnu Travels" className="w-full h-full object-cover" />
                 </div>
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
