@@ -149,14 +149,12 @@ export default function Landing() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
-                <Car className="w-5 h-5 text-white" />
-              </div>
+            <a href="/" className="flex items-center gap-2.5">
+              <img src="/assets/logo.jpeg" alt="Vishnu Travels" className="w-9 h-9 rounded-xl object-cover" />
               <span className="text-lg font-bold tracking-tight text-foreground">
                 Vishnu Travels
               </span>
-            </div>
+            </a>
             <div className="hidden md:flex items-center gap-8">
               {["About", "Services", "Fleet", "Reviews", "Contact"].map((item) => (
                 <a
@@ -210,11 +208,15 @@ export default function Landing() {
                 <Award className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-primary">Trusted Since 2019</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold tracking-tight leading-[1.08]">
-                Premium Travel{" "}
-                <br className="hidden sm:block" />
-                <span className="text-primary">Built on Trust</span>
-              </h1>
+              <div className="flex items-center gap-4 mb-6">
+                <img src="/assets/logo.jpeg" alt="Vishnu Travels" className="w-14 h-14 rounded-2xl object-cover shadow-md" />
+                <div>
+                  <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold tracking-tight leading-[1.08]">
+                    Premium Travel{" "}
+                    <span className="text-primary">Built on Trust</span>
+                  </h1>
+                </div>
+              </div>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-lg">
                 From compact sedans to 56-seater coaches — dependable, well-maintained
                 vehicles driven by experienced professionals. Serving families,
@@ -711,9 +713,7 @@ export default function Landing() {
           <div className="grid md:grid-cols-3 gap-10">
             <div>
               <div className="flex items-center gap-2.5 mb-4">
-                <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
-                  <Car className="w-5 h-5 text-white" />
-                </div>
+                <img src="/assets/logo.jpeg" alt="Vishnu Travels" className="w-9 h-9 rounded-xl object-cover" />
                 <span className="text-lg font-bold tracking-tight">
                   Vishnu Travels
                 </span>
