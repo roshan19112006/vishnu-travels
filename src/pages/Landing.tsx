@@ -346,7 +346,7 @@ export default function Landing() {
                   />
                   <div className="hidden flex-col items-center gap-3 p-8">
                     <Camera className="w-12 h-12 text-primary/30" />
-                    <p className="text-sm text-muted-foreground/60">Add owner image</p>
+
                   </div>
                 </div>
                 {/* Floating badge */}
