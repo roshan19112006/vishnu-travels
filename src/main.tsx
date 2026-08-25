@@ -80,7 +80,11 @@ class RootErrorBoundary extends React.Component<
   }
 }
 
-const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
+const convexUrl = import.meta.env.VITE_CONVEX_URL;
+if (!convexUrl) {
+  console.error("VITE_CONVEX_URL is not set. Add it to your Vercel project environment variables.");
+}
+const convex = new ConvexReactClient(convexUrl || "https://placeholder.convex.cloud");
 
 
 
