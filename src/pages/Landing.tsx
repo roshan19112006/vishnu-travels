@@ -231,9 +231,9 @@ export default function Landing() {
                   className="rounded-full px-7 border-border/60"
                   asChild
                 >
-                  <a href="tel:+9025336238">
+                  <a href="tel:+919025336238">
                     <Phone className="w-5 h-5 mr-2" />
-                    Call Now
+                    +91 90253 36238
                   </a>
                 </Button>
                 <a
@@ -393,7 +393,7 @@ export default function Landing() {
                 className="mt-8 bg-primary hover:bg-primary/90 text-white rounded-full shadow-md shadow-primary/10"
                 asChild
               >
-                <a href="tel:+9025336238">
+                <a href="tel:+919025336238">
                   Speak with Us
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
@@ -602,9 +602,9 @@ export default function Landing() {
                   className="bg-white/15 text-white hover:bg-white/25 border border-white/30 rounded-full px-7"
                   asChild
                 >
-                  <a href="tel:+9025336238">
+                  <a href="tel:+919025336238">
                     <Phone className="w-5 h-5 mr-2" />
-                    Call: 90253 36238
+                    +91 90253 36238
                   </a>
                 </Button>
               </div>
@@ -635,7 +635,7 @@ export default function Landing() {
                 icon: Phone,
                 title: "Phone",
                 value: "+91 90253 36238",
-                link: "tel:+9025336238",
+                link: "tel:+919025336238",
                 value2: "+91 86809 53210",
                 link2: "tel:+918680953210",
                 desc: "Available 24/7",
@@ -770,7 +770,7 @@ export default function Landing() {
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="tel:+9025336238"
+                  href="tel:+919025336238"
                   className="w-9 h-9 rounded-lg bg-primary/[0.06] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
                 >
                   <Phone className="w-4 h-4" />
