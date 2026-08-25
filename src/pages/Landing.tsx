@@ -332,18 +332,19 @@ export default function Landing() {
             <motion.div {...fadeUp}>
               <div className="relative">
                 {/* Photo placeholder — replace the inner div with an <img> once you add your photo */}
-                <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-primary/[0.06] to-accent/[0.04] border border-border/30 flex items-center justify-center overflow-hidden">                      <div className="flex flex-col items-center gap-4 p-8">
-                    <div className="w-28 h-28 rounded-full bg-primary/[0.1] flex items-center justify-center border-2 border-primary/10">
-                      {/* Replace with: <img src="/vishnu.jpg" alt="Vishnu" className="w-full h-full object-cover rounded-full" /> */}
-                      <Camera className="w-10 h-10 text-primary/50" />
-                    </div>
-                    <div className="text-center">
-                      <p className="text-xl font-bold text-foreground">Vishnu</p>
-                      <p className="text-sm text-muted-foreground mt-0.5">Founder & Owner</p>
-                    </div>
-                    <p className="text-xs text-muted-foreground/60 bg-muted/50 rounded-full px-3 py-1">
-                      Add your photo to public/
-                    </p>
+                <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-primary/[0.06] to-accent/[0.04] border border-border/30 flex items-center justify-center overflow-hidden">                      {/* Owner photo — drop your photo as public/vishnu.jpg then uncomment the img tag and remove the placeholder */}
+                  <img
+                    src="/vishnu.jpg"
+                    alt="Vishnu — Founder & Owner"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).style.display = "none";
+                      (e.currentTarget.nextElementSibling as HTMLElement).style.display = "flex";
+                    }}
+                  />
+                  <div className="hidden flex-col items-center gap-3 p-8">
+                    <Camera className="w-12 h-12 text-primary/30" />
+                    <p className="text-sm text-muted-foreground/60">Add vishnu.jpg to public/</p>
                   </div>
                 </div>
                 {/* Floating badge */}
