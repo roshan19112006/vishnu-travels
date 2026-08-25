@@ -236,10 +236,15 @@ export default function Landing() {
                     Call Now
                   </a>
                 </Button>
-                <div className="flex items-center gap-1.5 text-muted-foreground">
+                <a
+                  href="https://share.google/urA8hfxsKIdOpOmyA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors"
+                >
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">Thiruvannamalai</span>
-                </div>
+                </a>
               </div>
               <div className="flex items-center gap-6 mt-8 pt-8 border-t border-border/50">
                 {["No Hidden Charges", "Verified Drivers", "Available 24/7"].map((item) => (
