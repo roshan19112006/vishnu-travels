@@ -636,6 +636,8 @@ export default function Landing() {
                 title: "Phone",
                 value: "+91 90253 36238",
                 link: "tel:+9025336238",
+                value2: "+91 86809 53210",
+                link2: "tel:+918680953210",
                 desc: "Available 24/7",
               },
               {
@@ -684,6 +686,17 @@ export default function Landing() {
                     >
                       {contact.value}
                     </a>
+                    {"value2" in contact && contact.link2 && (
+                      <>
+                        <br />
+                        <a
+                          href={contact.link2}
+                          className="text-sm font-medium text-primary hover:underline break-all"
+                        >
+                          {contact.value2}
+                        </a>
+                      </>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
