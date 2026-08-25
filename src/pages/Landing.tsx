@@ -109,32 +109,24 @@ const reviews = [
     location: "Chennai",
     rating: 5,
     text: "Booked an Innova for a family pilgrimage to Madurai. The vehicle was spotless, the driver was courteous and punctual, and the entire journey was seamless. Will definitely book again.",
-    initials: "KR",
-    color: "bg-primary/10 text-primary",
   },
   {
     name: "Priya S.",
     location: "Coimbatore",
     rating: 5,
     text: "We hired a 12-seater tempo traveller for our office trip to Ooty. Spacious, well-maintained, and the driver knew every route perfectly. Excellent value for money.",
-    initials: "PS",
-    color: "bg-accent/15 text-amber-700",
   },
   {
     name: "Mohammed A.",
     location: "Salem",
     rating: 5,
     text: "Used Vishnu Travels for my sister's wedding — booked two vehicles for the full day. Everything ran on time, vehicles were decorated as requested, and the pricing was transparent with no hidden costs.",
-    initials: "MA",
-    color: "bg-blue-50 text-blue-700",
   },
   {
     name: "Lakshmi D.",
     location: "Tiruchirappalli",
     rating: 5,
     text: "Hired a 56-seater bus for a temple tour with our community group of 50 people. The bus was comfortable, AC worked perfectly, and the driver was very cooperative throughout the three-day trip.",
-    initials: "LD",
-    color: "bg-emerald-50 text-emerald-700",
   },
 ];
 
@@ -340,10 +332,9 @@ export default function Landing() {
             <motion.div {...fadeUp}>
               <div className="relative">
                 {/* Photo placeholder — replace the inner div with an <img> once you add your photo */}
-                <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-primary/[0.06] to-accent/[0.04] border border-border/30 flex items-center justify-center overflow-hidden">
-                  <div className="flex flex-col items-center gap-4 p-8">
+                <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-primary/[0.06] to-accent/[0.04] border border-border/30 flex items-center justify-center overflow-hidden">                      <div className="flex flex-col items-center gap-4 p-8">
                     <div className="w-28 h-28 rounded-full bg-primary/[0.1] flex items-center justify-center border-2 border-primary/10">
-                      {/* Replace this Camera icon with <img src="/your-photo.jpg" alt="Vishnu" className="w-full h-full object-cover rounded-full" /> */}
+                      {/* Replace with: <img src="/vishnu.jpg" alt="Vishnu" className="w-full h-full object-cover rounded-full" /> */}
                       <Camera className="w-10 h-10 text-primary/50" />
                     </div>
                     <div className="text-center">
@@ -351,7 +342,7 @@ export default function Landing() {
                       <p className="text-sm text-muted-foreground mt-0.5">Founder & Owner</p>
                     </div>
                     <p className="text-xs text-muted-foreground/60 bg-muted/50 rounded-full px-3 py-1">
-                      Place your photo here
+                      Add your photo to public/
                     </p>
                   </div>
                 </div>
@@ -550,12 +541,8 @@ export default function Landing() {
                     <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                       "{review.text}"
                     </p>
-                    <div className="flex items-center gap-3 pt-4 border-t border-border/40">
-                      {/* Customer photo placeholder — replace with <img> when you add real customer photos */}
-                      <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold ${review.color}`}>
-                        {review.initials}
-                      </div>
-                      <div className="flex-1">
+                    <div className="flex items-center justify-between pt-4 border-t border-border/40">
+                      <div>
                         <p className="text-sm font-semibold">{review.name}</p>
                         <p className="text-xs text-muted-foreground">{review.location}</p>
                       </div>
