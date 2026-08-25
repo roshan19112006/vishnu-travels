@@ -611,8 +611,7 @@ export default function Landing() {
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-white/25 text-white hover:bg-white/10 rounded-full px-7"
+                  className="bg-white/15 text-white hover:bg-white/25 border border-white/30 rounded-full px-7"
                   asChild
                 >
                   <a href="tel:+9025336238">
